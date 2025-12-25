@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clinic Online Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>ABC Clinic</h1>
+    <p>Online Patient Registration</p>
+
+    <form id="registrationForm">
+      <label>Full Name</label>
+      <input type="text" required>
+
+      <label>Age</label>
+      <input type="number" required>
+
+      <label>Gender</label>
+      <select required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Mobile Number</label>
+      <input type="tel" required>
+
+      <label>Appointment Date</label>
+      <input type="date" required>
+
+      <label>Symptoms / Reason for Visit</label>
+      <textarea rows="3"></textarea>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
