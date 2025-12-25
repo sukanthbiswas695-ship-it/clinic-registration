@@ -1,7 +1,7 @@
 const form = document.getElementById("registrationForm");
 const message = document.getElementById("message");
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const data = {
@@ -15,13 +15,18 @@ form.addEventListener("submit", function(e) {
 
   fetch("https://script.google.com/macros/s/AKfycbxFk5Jb_wsAXubaODdJeGQQoumlg8ZK7xKrm0TsGVKzgrNnqpt4O6U_qIVDMDXFYF7S8Q/exec", {
     method: "POST",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8"
+    },
     body: JSON.stringify(data)
   })
   .then(() => {
+    message.style.color = "green";
     message.textContent = "Registration successful!";
     form.reset();
   })
   .catch(() => {
-    message.textContent = "Error. Please try again.";
+    message.style.color = "red";
+    message.textContent = "Submission failed!";
   });
 });
