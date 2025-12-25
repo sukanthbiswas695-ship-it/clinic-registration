@@ -13,7 +13,7 @@ form.addEventListener("submit", function(e) {
     symptoms: document.getElementById("symptoms").value
   };
 
-  fetch("PASTE_YOUR_WEB_APP_URL_HERE", {
+  fetch("https://script.google.com/macros/s/AKfycbxFk5Jb_wsAXubaODdJeGQQoumlg8ZK7xKrm0TsGVKzgrNnqpt4O6U_qIVDMDXFYF7S8Q/exec", {
     method: "POST",
     body: JSON.stringify(data)
   })
